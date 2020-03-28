@@ -50,7 +50,38 @@ document.write(Y);
 }
 document.write("<br>" + Y);
 
-function myFunction(name) {
-    return "Hello " + Grace;
+function myFunction() {
+    return Math.PI;
 }
-  document.getElementById("name").innerHTML = myFunction("Grace");
+document.getElementById("math").innerHTML = myFunction();
+
+let cat = {
+    color: " black ",
+    age: " 3 year old ",
+    type: " short-haired ",
+    name: " Luna.",
+    description: function() {
+        return "The cat is a " + this.color + this.type + this.age + "named" + this.name;
+    }
+};
+document.getElementById("Cat_Object").innerHTML = cat.description();
+
+var text = "";
+var i;
+for (i = 0; i < 10; i++) {
+    if (i === 6) { break; }
+    text += "The number is" + i + "<br>"
+}
+document.getElementById("break").innerHTML = text;
+
+function contFunction() {
+var text = "";
+var i;
+for (i = 0; i < 5; i++) {
+  if (i === 3) {
+    continue;
+  }
+  text += "The number is " + i + "<br>";
+}
+document.getElementById("continue").innerHTML = text;
+}
